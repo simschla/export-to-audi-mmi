@@ -393,7 +393,7 @@ on convertToTargetType(myTargetEncoder, myMusicDestination, myArtistName, mySong
 			
 			
 			try
-				with timeout of (20 * 60) seconds
+				with timeout of 1200 seconds
 					set errorDialogText to "We had a problem converting the file listed below.  Is it DRM-protected?  (We can't currently convert those)."
 					set convertedTrack to item 1 of (convert (some track of library playlist 1 whose persistent ID is myPersistID))
 					set convertedLocation to location of convertedTrack
